@@ -1,0 +1,24 @@
+[0.028s] Invoking command in '/home/kwonbosung/ros2_udp/dev_ws/src/build/cpp_pubsub': /usr/bin/cmake --build /home/kwonbosung/ros2_udp/dev_ws/src/build/cpp_pubsub -- -j4 -l4
+[0.120s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.150s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.420s] Traceback (most recent call last):
+[0.420s]   File "/opt/ros/foxy/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py", line 21, in <module>
+[0.420s]     from ament_package.templates import get_environment_hook_template_path
+[0.420s] ModuleNotFoundError: No module named 'ament_package'
+[0.438s] CMake Error at /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_package_templates-extras.cmake:41 (message):
+[0.438s]   execute_process(/usr/bin/python3
+[0.438s]   /opt/ros/foxy/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py
+[0.438s]   /home/kwonbosung/ros2_udp/dev_ws/src/build/cpp_pubsub/ament_cmake_package_templates/templates.cmake)
+[0.439s]   returned error code 1
+[0.439s] Call Stack (most recent call first):
+[0.439s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.439s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.439s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.439s]   CMakeLists.txt:19 (find_package)
+[0.439s] 
+[0.439s] 
+[0.440s] -- Configuring incomplete, errors occurred!
+[0.440s] See also "/home/kwonbosung/ros2_udp/dev_ws/src/build/cpp_pubsub/CMakeFiles/CMakeOutput.log".
+[0.440s] See also "/home/kwonbosung/ros2_udp/dev_ws/src/build/cpp_pubsub/CMakeFiles/CMakeError.log".
+[0.441s] make: *** [Makefile:266: cmake_check_build_system] Error 1
+[0.443s] Invoked command in '/home/kwonbosung/ros2_udp/dev_ws/src/build/cpp_pubsub' returned '2': /usr/bin/cmake --build /home/kwonbosung/ros2_udp/dev_ws/src/build/cpp_pubsub -- -j4 -l4

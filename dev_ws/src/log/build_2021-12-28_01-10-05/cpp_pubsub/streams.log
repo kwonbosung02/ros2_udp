@@ -1,0 +1,47 @@
+[0.017s] Invoking command in '/home/kwonbosung/ros2_udp/dev_ws/src/build/cpp_pubsub': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/kwonbosung/ros2_udp/dev_ws/src/build/cpp_pubsub -- -j4 -l4
+[0.075s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.100s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.296s] -- Found rclcpp: 2.4.0 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.350s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.356s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.520s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.598s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.601s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.777s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.862s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.863s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.864s] -- Configured cppcheck include dirs: 
+[0.864s] -- Configured cppcheck exclude dirs and/or files: 
+[0.864s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.865s] -- Configured cpplint exclude dirs and/or files: 
+[0.865s] -- Added test 'lint_cmake' to check CMake code style
+[0.866s] -- Added test 'uncrustify' to check C / C++ code style
+[0.867s] -- Configured uncrustify additional arguments: 
+[0.867s] -- Added test 'xmllint' to check XML markup files
+[0.871s] -- Configuring done
+[0.892s] -- Generating done
+[0.894s] -- Build files have been written to: /home/kwonbosung/ros2_udp/dev_ws/src/build/cpp_pubsub
+[0.924s] [35m[1mScanning dependencies of target listener[0m
+[0.958s] [ 50%] Built target talker
+[1.036s] [ 75%] [32mBuilding CXX object CMakeFiles/listener.dir/src/test_subscribe.cpp.o[0m
+[5.944s] [100%] [32m[1mLinking CXX executable listener[0m
+[6.272s] [100%] Built target listener
+[6.287s] Invoked command in '/home/kwonbosung/ros2_udp/dev_ws/src/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/kwonbosung/ros2_udp/dev_ws/src/build/cpp_pubsub -- -j4 -l4
+[6.344s] Invoking command in '/home/kwonbosung/ros2_udp/dev_ws/src/build/cpp_pubsub': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/kwonbosung/ros2_udp/dev_ws/src/build/cpp_pubsub
+[6.354s] -- Install configuration: ""
+[6.355s] -- Up-to-date: /home/kwonbosung/ros2_udp/dev_ws/src/install/cpp_pubsub/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub
+[6.355s] -- Up-to-date: /home/kwonbosung/ros2_udp/dev_ws/src/install/cpp_pubsub/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub
+[6.355s] -- Up-to-date: /home/kwonbosung/ros2_udp/dev_ws/src/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.sh
+[6.356s] -- Installing: /home/kwonbosung/ros2_udp/dev_ws/src/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.dsv
+[6.356s] -- Up-to-date: /home/kwonbosung/ros2_udp/dev_ws/src/install/cpp_pubsub/share/cpp_pubsub/environment/path.sh
+[6.356s] -- Installing: /home/kwonbosung/ros2_udp/dev_ws/src/install/cpp_pubsub/share/cpp_pubsub/environment/path.dsv
+[6.356s] -- Up-to-date: /home/kwonbosung/ros2_udp/dev_ws/src/install/cpp_pubsub/share/cpp_pubsub/local_setup.bash
+[6.356s] -- Up-to-date: /home/kwonbosung/ros2_udp/dev_ws/src/install/cpp_pubsub/share/cpp_pubsub/local_setup.sh
+[6.356s] -- Up-to-date: /home/kwonbosung/ros2_udp/dev_ws/src/install/cpp_pubsub/share/cpp_pubsub/local_setup.zsh
+[6.357s] -- Installing: /home/kwonbosung/ros2_udp/dev_ws/src/install/cpp_pubsub/share/cpp_pubsub/local_setup.dsv
+[6.357s] -- Installing: /home/kwonbosung/ros2_udp/dev_ws/src/install/cpp_pubsub/share/cpp_pubsub/package.dsv
+[6.357s] -- Up-to-date: /home/kwonbosung/ros2_udp/dev_ws/src/install/cpp_pubsub/share/ament_index/resource_index/packages/cpp_pubsub
+[6.357s] -- Up-to-date: /home/kwonbosung/ros2_udp/dev_ws/src/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig.cmake
+[6.357s] -- Up-to-date: /home/kwonbosung/ros2_udp/dev_ws/src/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig-version.cmake
+[6.358s] -- Up-to-date: /home/kwonbosung/ros2_udp/dev_ws/src/install/cpp_pubsub/share/cpp_pubsub/package.xml
+[6.359s] Invoked command in '/home/kwonbosung/ros2_udp/dev_ws/src/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/kwonbosung/ros2_udp/dev_ws/src/build/cpp_pubsub
