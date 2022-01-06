@@ -22,12 +22,12 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(rclcpp REQUIRED)
 
 add_executable(udp_receive            src/udp_receive.cpp)
-#add_executable(udp_send               src/udp_send.cpp)
-#add_executable(udp_send_receive_test  src/udp_send_receive_test.cpp)
+add_executable(udp_send               src/udp_send.cpp)
+add_executable(udp_send_receive_test  src/udp_send_receive_test.cpp)
 
 ament_target_dependencies(udp_receive               "rclcpp")
-#ament_target_dependencies(udp_send                  "rclcpp")
-#ament_target_dependencies(udp_send_receive_test     "rclcpp")
+ament_target_dependencies(udp_send                  "rclcpp")
+ament_target_dependencies(udp_send_receive_test     "rclcpp")
 
 set(msg_files
         "msg/UdpPacket.msg")
@@ -35,17 +35,19 @@ set(msg_files
 rosidl_generate_interfaces(${PROJECT_NAME}
         ${msg_files})
 
-#rosidl_target_interfaces(udp_send
-#        ${PROJECT_NAME} "rosidl_typesupport_cpp")
+rosidl_target_interfaces(udp_send
+        ${PROJECT_NAME} "rosidl_typesupport_cpp")
 rosidl_target_interfaces(udp_receive
         ${PROJECT_NAME} "rosidl_typesupport_cpp")
-#rosidl_target_interfaces(udp_send_receive_test
-#        ${PROJECT_NAME} "rosidl_typesupport_cpp")
+rosidl_target_interfaces(udp_send_receive_test
+        ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
 ament_export_dependencies(rosidl_default_runtime)
 
 install(TARGETS
         udp_receive
+        udp_send
+        udp_send_receive_test
         DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
