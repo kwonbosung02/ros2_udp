@@ -11,3 +11,7 @@ dev_ws/src/install/
 dev_ws/src/.vscode/
 
 dev_ws/src/log/
+
+dev_ws/src/io.txt
+
+dev_ws/src/log.txt
