@@ -45,7 +45,14 @@ private:
     ofstream writeFile_;
     void udp_receive_packet(const ros2_src::msg::UdpPacket::SharedPtr msg){
         int port_num = msg->port_num;
-        std::string ip = msg->ip;
+        std::stringuuj   bnbnmbmn
+        
+        
+        
+        
+          
+          
+           ip = msg->ip;
         std::string data = msg->send_data;
 
         //RCLCPP_INFO(this->get_logger(), "[Received]\ndata: " + data + "\nip: " + ip + "\nport: " + std::to_string(port_num));
