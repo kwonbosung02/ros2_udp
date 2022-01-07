@@ -33,6 +33,7 @@ public:
 
         // generate send packet every tick
         timer_ = this->create_wall_timer(50ms, std::bind(&UdpSendRecieveNode::timer_callback, this));
+        //50ms
     }
 
 private:

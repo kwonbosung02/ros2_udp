@@ -14,7 +14,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "ros2_src/msg/udp_packet.hpp"
 
-#define BUFSIZE         (120)
+#define BUFSIZE         (10)
 
 using namespace std::chrono_literals;
 
@@ -53,7 +53,7 @@ public : UdpReceivePublisher() : Node("udp_receive_server"), count_(0) {
         // publish udp data indefinitely
         while(1) {
             // receive packet
-            receivedBytes = recvfrom(serverFd, recvBuffer, BUFSIZE, 0, (struct sockaddr*)&clientAddr, (unsigned int *)&clientAddrSize);
+            receivedBytes = recvfrom(serverFd, recvBuffer, BUFSIZE * 4, 0, (struct sockaddr*)&clientAddr, (unsigned int *)&clientAddrSize);
             rclcpp::Time current_time = rclcpp::Node::now();
             long cur = current_time.nanoseconds();
             RCLCPP_INFO(this->get_logger(),std::to_string(cur));
@@ -64,6 +64,14 @@ public : UdpReceivePublisher() : Node("udp_receive_server"), count_(0) {
 
                 return;
             }
+            
+            for(int i = 0; i < BUFSIZE; i++){
+                
+                s = s + std::to_string(recvBuffer[i]) + " "; 
+            }
+
+            RCLCPP_INFO(this->get_logger(), s);
+            s ="";
 
             // make topic
             auto message = ros2_src::msg::UdpPacket();
@@ -71,6 +79,9 @@ public : UdpReceivePublisher() : Node("udp_receive_server"), count_(0) {
             message.ip = std::string(inet_ntoa(clientAddr.sin_addr));
             message.port_num = port_num;
             RCLCPP_INFO(this->get_logger(),"publish message");
+
+   
+
             publisher_->publish(message);
         
         }
@@ -80,7 +91,7 @@ public : UdpReceivePublisher() : Node("udp_receive_server"), count_(0) {
 private:
     rclcpp::Publisher<ros2_src::msg::UdpPacket>::SharedPtr publisher_;
     size_t count_;
-
+    std::string s = "";
     int serverFd, clientFd;
     struct sockaddr_in serverAddr, clientAddr;
     float recvBuffer[BUFSIZE];
