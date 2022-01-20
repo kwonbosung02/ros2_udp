@@ -28,6 +28,8 @@ include_directories(
 
 add_executable(udp_receive ${PROJECT_SOURCE_DIR}/src/udp_receive.cpp)
 add_executable(udp_send_receive ${PROJECT_SOURCE_DIR}/src/udp_send_receive.cpp)
+add_executable(udp_send ${PROJECT_SOURCE_DIR}/src/udp_send.cpp)
 
 target_link_libraries(udp_receive ${catkin_LIBRARIES})
 target_link_libraries(udp_send_receive ${catkin_LIBRARIES})
+target_link_libraries(udp_send ${catkin_LIBRARIES})

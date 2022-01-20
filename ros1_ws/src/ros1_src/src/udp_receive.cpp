@@ -18,7 +18,7 @@
 
 using namespace std::chrono_literals;
 
-int frequency = 4000;
+int frequency = 10;
 
 std::string print_str(float arr[]);
 
@@ -72,6 +72,7 @@ int main(int argc, char **argv){
 
         pub.publish(message);
         ros::spinOnce();
+
         loop_rate.sleep();
     }
 
