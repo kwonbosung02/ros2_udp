@@ -15,3 +15,11 @@ dev_ws/src/log/
 dev_ws/src/io.txt
 
 dev_ws/src/log.txt
+
+ros1_ws/.catkin_tools/
+
+ros1_ws/.vscode/
+
+ros1_ws/build/
+
+ros1_ws/devel/
