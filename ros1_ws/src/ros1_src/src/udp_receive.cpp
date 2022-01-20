@@ -41,7 +41,7 @@ int main(int argc, char **argv){
     serverAddr.sin_addr.s_addr = INADDR_ANY;
     serverAddr.sin_port = htons(UDP_RECEIVE_PORT);
 
-    if(serverFd = socket(AF_INET, SOCK_DGRAM, 0) == -1){
+    if((serverFd = socket(AF_INET, SOCK_DGRAM, 0)) == -1){
         ROS_INFO("Fail to open socket");
         return -1;
     }
@@ -55,7 +55,7 @@ int main(int argc, char **argv){
     ros::Rate loop_rate(frequency);
 
     while (ros::ok()){
-        receivedBytes = recvfrom(serverFd, recvBuffer, BUFSIZE, 0, (struct sockaddr*)&clientAddr, (unsigned int *)&clientAddrSize);
+        receivedBytes = recvfrom(serverFd, recvBuffer, BUFSIZE * 4, 0, (struct sockaddr*)&clientAddr, (unsigned int *)&clientAddrSize);
         
         if(receivedBytes == 0) continue;
         else if(receivedBytes < 0){
@@ -64,8 +64,15 @@ int main(int argc, char **argv){
         }
         std::string result = print_str(recvBuffer);
         ROS_INFO(result.c_str());
-        
 
+        
+        auto message = ros1_src::UdpPacket();
+        ros::Time current_time = ros::Time::now();
+        message.send_data = current_time.toSec();
+
+        pub.publish(message);
+        ros::spinOnce();
+        loop_rate.sleep();
     }
 
     return 0;
